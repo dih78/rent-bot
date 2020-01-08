@@ -1,7 +1,7 @@
 use Mix.Config
 
 # Configure your database
-config :rent_bot_web, RentBotWeb.Repo,
+config :rent_bot_web, RentBot.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: "${DATABASE_URL}",
   database: "",
