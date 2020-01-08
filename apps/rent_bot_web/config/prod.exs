@@ -27,7 +27,7 @@ config :rent_bot_web, RentBotWeb.Repo,
   url: "${DATABASE_URL}",
   database: "",
   ssl: true,
-  pool_size: 9
+  pool_size: 25
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key

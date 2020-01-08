@@ -1,10 +1,9 @@
 use Mix.Config
 
 # Configure your database
-config :rent_bot, RentBot.Repo,
+config :rent_bot_web, RentBotWeb.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "rent_bot_dev",
-  hostname: "localhost",
-  pool_size: 10
+  url: "${DATABASE_URL}",
+  database: "",
+  ssl: true,
+  pool_size: 25
