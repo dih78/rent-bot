@@ -9,7 +9,7 @@ defmodule RentBotWeb.Mixfile do
       config_path: "../../config/config.exs",
       deps_path: "../../deps",
       lockfile: "../../mix.lock",
-      elixir: "~> 1.6",
+      elixir: "~> 1.9",
       elixirc_paths: elixirc_paths(Mix.env),
       compilers: [:phoenix, :gettext] ++ Mix.compilers,
       start_permanent: Mix.env == :prod,
@@ -48,7 +48,7 @@ defmodule RentBotWeb.Mixfile do
       {:cowboy, "~> 1.0"},
       {:quantum, "~> 2.3"},
       {:timex, "~> 3.0"},
-      {:distillery, "~> 1.5"}
+      {:distillery, "~> 2.1"}
     ]
   end
 
