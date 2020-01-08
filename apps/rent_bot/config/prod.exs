@@ -6,4 +6,4 @@ config :rent_bot, RentBot.Repo,
   url: "${DATABASE_URL}",
   database: "",
   ssl: true,
-  pool_size: 25
+  pool_size: 2
