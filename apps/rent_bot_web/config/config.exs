@@ -28,9 +28,9 @@ config :rent_bot_web, :generators,
 
 config :rent_bot_web, RentBotWeb.Scheduler,
   jobs: [
-    {"*/5 * * * *", {RentBotWeb.Tasks.CustoJusto, :import_ads, [1]}},
-    {"*/5 * * * *", {RentBotWeb.Tasks.Idealista, :import_ads, [1]}},
-    {"*/5 * * * *", {RentBotWeb.Tasks.Imovirtual, :import_ads, [1]}},
+    {"*/20 * * * *", {RentBotWeb.Tasks.CustoJusto, :import_ads, [1]}},
+    {"*/20 * * * *", {RentBotWeb.Tasks.Idealista, :import_ads, [1]}},
+    {"*/20 * * * *", {RentBotWeb.Tasks.Imovirtual, :import_ads, [1]}},
   ]
 
 config :rent_bot_web, RentBotWeb.BotController,
