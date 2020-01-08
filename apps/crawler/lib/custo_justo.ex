@@ -1,6 +1,6 @@
 defmodule Crawler.CustoJusto do
   def import(page \\ 1) do
-    url = "http://www.custojusto.pt/porto/apartamentos-arrendar?o=#{page}&pe=6&st=u"
+    url = "https://www.gumtree.pl/s-mieszkania-i-domy-do-wynajecia/mokotow/v1c9008l3200012p1?pr=1000,2300"
 
     url
     |> get_page_html()

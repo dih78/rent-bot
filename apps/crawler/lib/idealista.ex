@@ -1,6 +1,6 @@
 defmodule Crawler.Idealista do
   def import(page \\ 1) do
-    url = "https://www.idealista.pt/arrendar-casas/porto-distrito/com-preco-max_600/pagina-#{page}?ordem=atualizado-desc"
+    url = "https://www.olx.pl/nieruchomosci/mieszkania/wynajem/warszawa/?search%5Bfilter_float_price%3Afrom%5D=1000&search%5Bfilter_float_price%3Ato%5D=2300&search%5Bfilter_enum_rooms%5D%5B0%5D=two&search%5Border%5D=filter_float_price%3Aasc&search%5Bdistrict_id%5D=353"
 
     url
     |> get_page_html()
