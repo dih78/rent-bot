@@ -46,7 +46,7 @@ defmodule RentBotWeb.Mixfile do
       {:crawler, in_umbrella: true},
       {:rent_bot, in_umbrella: true},
       {:cowboy, "~> 1.0"},
-      {:quantum, ">= 2.3"},
+      {:quantum, "~> 2.3"},
       {:timex, "~> 3.0"},
       {:distillery, "~> 1.5"}
     ]
