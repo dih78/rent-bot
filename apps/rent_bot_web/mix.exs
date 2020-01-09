@@ -48,7 +48,7 @@ defmodule RentBotWeb.Mixfile do
       {:cowboy, "~> 1.0"},
       {:quantum, "~> 2.3"},
       {:timex, "~> 3.0"},
-      {:distillery, "~> 1.5"}
+      {:distillery, "~> 2.0"}
     ]
   end
 
