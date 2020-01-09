@@ -24,7 +24,7 @@ config :rent_bot_web, RentBotWeb.Endpoint,
 
 config :rent_bot_web, RentBotWeb.Repo,
   adapter: Ecto.Adapters.Postgres,
-  url: "${DATABASE_URL}",
+  url: {:system, "DATABASE_URL"},
   database: "",
   ssl: true,
   pool_size: 2
