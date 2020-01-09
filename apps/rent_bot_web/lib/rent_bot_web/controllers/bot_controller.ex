@@ -19,7 +19,7 @@ defmodule RentBotWeb.BotController do
         IO.inspect(event)
         %{"message" => %{"text" => text}, "sender" => %{"id" => sender_psid}} = event
         case text do
-          "pushinhas" ->
+          "Subscribe me pls" ->
             RentBot.Subscribers.create_subscriber(%{psid: sender_psid})
             send_message(sender_psid, "You are now subscribed to my updates! :)")
           _other -> send_message(sender_psid, "new phone who dis?")
