@@ -22,12 +22,7 @@ config :rent_bot_web, RentBotWeb.Endpoint,
   url: [host: "${APP_NAME}.gigalixirapp.com", port: 4000],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
-config :rent_bot_web, RentBotWeb.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  url: {:system, "DATABASE_URL"},
-  database: "",
-  ssl: true,
-  pool_size: 9
+
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
