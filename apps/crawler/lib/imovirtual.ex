@@ -1,6 +1,6 @@
 defmodule Crawler.Imovirtual do
   def import(page \\ 1) do
-    url = "https://www.szybko.pl/l/na-wynajem/lokal-mieszkalny+mieszkanie/Mokot%C3%B3w+Warszawa+mazowieckie?strona=1&sort=price_from_min"
+    url = "https://www.szybko.pl/l/na-wynajem/lokal-mieszkalny+mieszkanie/Mokot%C3%B3w+Warszawa+mazowieckie?strona=#{page}&sort=price_from_min"
 
     url
     |> get_page_html()
