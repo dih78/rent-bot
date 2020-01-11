@@ -34,8 +34,8 @@ config :rent_bot_web, RentBotWeb.Scheduler,
   ]
 
 config :rent_bot_web, RentBotWeb.BotController,
-  facebook_messenger_verify_token: "${1978}",
-  facebook_messenger_access_token: "${EAAGpcUTN31UBADN3GVgYESAmn2fvukRCtMMKC4d2ZCMUidZBBZAEeV10ZCuIx85kZAxklaKz4H2F0hww5MQpcd9ZAgBM1uabOAa8ZCYRb3J7xL3Uc7We3CcjxZAwZAamQ1HZAIEop27MX57hcObZBaHHfCaZAdOrPagOwB0a5fm4KruHXwZDZD}"
+  facebook_messenger_verify_token: "1978",
+  facebook_messenger_access_token: "EAAGpcUTN31UBADN3GVgYESAmn2fvukRCtMMKC4d2ZCMUidZBBZAEeV10ZCuIx85kZAxklaKz4H2F0hww5MQpcd9ZAgBM1uabOAa8ZCYRb3J7xL3Uc7We3CcjxZAwZAamQ1HZAIEop27MX57hcObZBaHHfCaZAdOrPagOwB0a5fm4KruHXwZDZD"
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
