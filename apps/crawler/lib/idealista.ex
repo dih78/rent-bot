@@ -1,6 +1,6 @@
 defmodule Crawler.Idealista do
   def import(page \\ 1) do
-    url = "https://www.olx.pl/nieruchomosci/mieszkania/wynajem/warszawa/?search%5Border%5D=filter_float_price%3Aasc&search%5Bfilter_float_price%3Afrom%5D=1000&search%5Bfilter_float_price%3Ato%5D=2300&view=gallery#{page}"
+    url = "https://www.olx.pl/nieruchomosci/mieszkania/wynajem/warszawa/?search%5Border%5D=filter_float_price%3Aasc&search%5Bfilter_float_price%3Afrom%5D=1000&search%5Bfilter_float_price%3Ato%5D=2300&view=gallery&page=#{page}"
 
     url
     |> get_page_html()
@@ -13,11 +13,11 @@ defmodule Crawler.Idealista do
     body
   end
 
-  defp get_dom_elements(body) do
-    Floki.find(body, "div.items-container > article")
+  def get_dom_elements(body) do
+    Floki.find(body, ".space rel > article")
   end
 
-  defp extract_metadata(elements) do
+  def extract_metadata(elements) do
     elements
     |> Enum.filter(fn {"article", attrs, _content} ->
       attrs == []
@@ -28,12 +28,12 @@ defmodule Crawler.Idealista do
         url: url(content),
         price: price(content),
         image: image(content),
-        provider: "Idealista"
+        provider: "Olx"
       }
     end)
   end
 
-  defp title(html) do
+  def title(html) do
     [{"a", _attrs, [title]}] = Floki.find(html, "div.item-info-container > a.item-link")
     String.trim(title)
   end

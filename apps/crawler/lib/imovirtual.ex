@@ -14,7 +14,7 @@ defmodule Crawler.Imovirtual do
   end
 
   defp get_dom_elements(body) do
-    Floki.find(body, "div.col-md-content > article.offer-item")
+    Floki.find(body, ".listing-content > article.offer-item")
   end
 
   defp extract_metadata(elements) do
@@ -24,7 +24,7 @@ defmodule Crawler.Imovirtual do
         url: url(attrs),
         price: price(content),
         image: image(content),
-        provider: "Imovirtual"
+        provider: "Szybko"
       }
     end)
   end

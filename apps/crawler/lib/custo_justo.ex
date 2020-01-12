@@ -11,10 +11,11 @@ defmodule Crawler.CustoJusto do
   defp get_page_html(url) do
     {:ok, %HTTPoison.Response{body: body}} = HTTPoison.get(url, [], follow_redirect: true)
     :iconv.convert("iso-8859-1", "utf-8", body)
+    Logger.info(body)
   end
 
   defp get_dom_elements(body) do
-    Floki.find(body, "div#dalist > a")
+    Floki.find(body, ".tileV1 > a")
   end
 
   defp extract_metadata(elements) do
@@ -24,7 +25,7 @@ defmodule Crawler.CustoJusto do
         url: url(attrs),
         price: price(content),
         image: image(content),
-        provider: "Custo Justo"
+        provider: "Gumtree"
       }
     end)
   end
