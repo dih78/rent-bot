@@ -13,11 +13,11 @@ defmodule Crawler.Idealista do
     body
   end
 
-  def get_dom_elements(body) do
+  defp get_dom_elements(body) do
     Floki.find(body, ".space rel > article")
   end
 
-  def extract_metadata(elements) do
+  defp extract_metadata(elements) do
     elements
     |> Enum.filter(fn {"article", attrs, _content} ->
       attrs == []
@@ -33,7 +33,7 @@ defmodule Crawler.Idealista do
     end)
   end
 
-  def title(html) do
+  defp title(html) do
     [{"a", _attrs, [title]}] = Floki.find(html, "div.item-info-container > a.item-link")
     String.trim(title)
   end
