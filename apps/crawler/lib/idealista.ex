@@ -1,6 +1,6 @@
 defmodule Crawler.Idealista do
   def import(page \\ 1) do
-    url = "https://www.olx.pl/nieruchomosci/mieszkania/wynajem/warszawa/?search%5Border%5D=filter_float_price%3Aasc&search%5Bfilter_float_price%3Afrom%5D=1000&search%5Bfilter_float_price%3Ato%5D=2300&view=gallery&page=#{page}"
+    url = "https://www.olx.pl/nieruchomosci/mieszkania/wynajem/warszawa/?search%5Border%5D=filter_float_price%3Aasc&search%5Bfilter_float_price%3Afrom%5D=1000&search%5Bfilter_float_price%3Ato%5D=2300&view=gallery#{page}"
 
     url
     |> get_page_html()
@@ -14,7 +14,11 @@ defmodule Crawler.Idealista do
   end
 
   defp get_dom_elements(body) do
+<<<<<<< HEAD
     Floki.find(body, ".space rel > article")
+=======
+    Floki.find(body, "div.items-container > article")
+>>>>>>> parent of 888773b... parser
   end
 
   defp extract_metadata(elements) do
@@ -28,7 +32,7 @@ defmodule Crawler.Idealista do
         url: url(content),
         price: price(content),
         image: image(content),
-        provider: "Olx"
+        provider: "Idealista"
       }
     end)
   end
