@@ -14,11 +14,7 @@ defmodule Crawler.Idealista do
   end
 
   defp get_dom_elements(body) do
-<<<<<<< HEAD
     Floki.find(body, ".space rel > article")
-=======
-    Floki.find(body, "div.items-container > article")
->>>>>>> parent of 888773b... parser
   end
 
   defp extract_metadata(elements) do
@@ -32,7 +28,7 @@ defmodule Crawler.Idealista do
         url: url(content),
         price: price(content),
         image: image(content),
-        provider: "Idealista"
+        provider: "Olx"
       }
     end)
   end
